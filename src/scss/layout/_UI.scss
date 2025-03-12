@@ -1,0 +1,110 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app{
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+    
+    .imagen{
+        height: 20rem;
+        background-image: url(../img/1.jpg);
+        background-size: cover;
+        background-position: center center;
+        @include m.tablet{
+            height: auto;
+        }
+    }
+
+    .app {
+
+        .acciones{
+            align-self: center;
+        }
+
+        .confirmar-cuenta{
+            padding: calc(v.$separacion/4);
+            width: 80%;
+            text-align: center;
+            margin: auto auto; // Centra horizontalmente
+
+            .boton{
+                width: 50%;
+                margin: 3rem auto; // Centra horizontalmente
+            }
+        }
+
+        @include m.tablet{
+            overflow: scroll;
+        }
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; // Distribuye el espacio entre los elementos
+        } 
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem 0;
+        box-shadow: -20px 0 10px 10px v.$negro;
+        min-height: 100vh; // Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana
+
+        .rs {
+            margin-top: 5rem; // Empuja .rs hacia la parte inferior del contenedor
+            p {
+                font-size: 1.9rem;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .iconos-rs {
+                margin-top: 1.5rem;
+                display: flex;
+                justify-content: space-between; // Espacio igual entre los iconos
+                width: 100%; // Asegura que los iconos ocupen el 100% del contenedor
+                max-width: 300px; // Ajusta el ancho máximo según tus necesidades
+
+                .icono {
+                    margin: 0 10px; // Añade un margen horizontal para separar los iconos
+                    color: v.$azul;
+                    font-size: xx-large;
+                }
+            }
+        }
+    }
+}
+
+.barra{
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .boton{
+        @include m.boton(v.$grisOscuro, v.$grisClaro);
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.barra-servicios{
+
+    .boton{
+        max-width: 100%;
+        margin: 1rem 0;
+        font-size: 2rem;
+        padding: 1.5rem 7rem;
+    }
+
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

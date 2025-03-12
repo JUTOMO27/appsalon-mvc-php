@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+
+.citas{
+
+    list-style: none;
+    padding: 0;
+    li{
+        border-top: 1px solid v.$blanco;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        p{
+            font-weight: v.$bold;
+
+        }
+
+        span,
+        .servicio{
+            font-weight: v.$regular;
+
+        }
+    }
+
+    .cita-cliente{
+        padding: 1.5rem;
+    }
+
+    .cita-servicio{
+        padding: 1.5rem;
+        text-align: right;
+        p{
+            font-weight: v.$bold;
+    
+        }
+    
+        span,
+        .servicio{
+            font-weight: v.$regular;
+    
+        }
+
+    }
+}
+
+.servicios{
+    @extend .citas;
+    
+    li{
+        align-items: center;
+
+        p:last-of-type{
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+    }
+    .acciones{
+        flex-direction:column;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+
+        .boton,
+        .boton-eliminar{
+            padding: 1rem;
+            margin: 1rem;
+            font-size: 2rem;
+        }
+    }
+}
+

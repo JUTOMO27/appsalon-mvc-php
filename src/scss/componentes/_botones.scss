@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boton{
+    @include m.boton(v.$azul, v.$blanco);
+    @include m.telefono{
+        font-size: x-large;
+        padding: 1.5rem 3rem;
+    }
+    border-radius: .5rem;
+    max-width: 50%;
+    min-width: 150px; // Ancho mínimo para evitar que el texto se corte
+    text-align: center; // Centra el texto dentro del botón
+    padding: 1rem 1rem; // Añade padding para asegurar espacio alrededor del texto
+    font-size: large;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+}
+
+.boton-eliminar{
+    @include m.boton(v.$rojo, v.$blanco);
+    @include m.telefono{
+        font-size: x-large;
+        padding: 1.5rem 3rem;
+    }
+    border-radius: .5rem;
+    max-width: 50%;
+    min-width: 150px; // Ancho mínimo para evitar que el texto se corte
+    text-align: center; // Centra el texto dentro del botón
+    padding: 1rem 1rem; // Añade padding para asegurar espacio alrededor del texto
+    font-size: large;
+    margin: 0;
+    margin-left: auto;
+}
+
+.boton-volver{
+    @include m.boton(v.$azul, v.$blanco);
+    @include m.telefono{
+        font-size: 2rem;
+        padding: 1.5rem 3rem;
+    }
+    border-radius: .5rem;
+    max-width: 160px;
+    min-width: 150px; // Ancho mínimo para evitar que el texto se corte
+    text-align: center; // Centra el texto dentro del botón
+    padding: 1rem 1rem; // Añade padding para asegurar espacio alrededor del texto
+    font-size: large;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+}

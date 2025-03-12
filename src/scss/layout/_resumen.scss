@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+
+.contenido-resumen{
+    margin: 2rem auto;
+    padding: 4rem 2rem;
+    background-color: v.$blanco;
+    border-width: 2px;
+    border-style:dotted none;
+    border-color: v.$grisOscuro;
+    max-width: 400px;
+
+    h3{
+        color: darken(v.$grisClaro, 30%);
+        font-size: 3rem;
+
+        &:first-of-type{
+        font-size: 6rem;
+        margin-bottom: 4rem;
+        }
+    }
+
+    p{
+        font-weight: v.$bold;
+        margin-bottom: 1rem;
+        color: darken(v.$grisClaro, 20%);
+        font-size: 2rem;
+    }
+
+    span{
+        color: darken(v.$grisClaro, 20%);
+        font-size: 2rem;
+        font-weight: 300;
+
+    }
+
+    .pie-ticket{
+        text-align: center;
+        font-size: small;
+    }
+
+    .servicio-precio{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px dashed v.$grisClaro;
+        padding: 2rem 0;
+    }
+
+    .resumen-total{
+        text-align: center;
+        font-weight: v.$bold;
+        border-bottom: 3px dashed v.$grisClaro;
+        padding-bottom: 2rem;
+        span{
+            font-weight: v.$bold;
+        }
+    }
+}
+
+.contenedor-servicio{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        flex: 1;
+        font-size: 2rem;
+        &:last-of-type{
+            text-align: right;
+            font-weight: 300;
+        }
+    }
+
+
+    &:last-of-type{
+        border-bottom: 3px dashed v.$grisClaro;
+    }
+}
+
+

@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.pagina-login {
+    align-items: flex-start; // Alinea al inicio en teléfonos
+    padding-top: 1rem; // Añade un pequeño espacio superior
+    display: flex;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    max-height: 100%;
+
+    @include m.telefono {
+        max-height: 100vh; // Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana
+        margin: 0; // Elimina el margen predeterminado del body
+    }
+}
+
+
+
+
+
